@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-zebra-printer-wifi-bt" version="1.0"
+	xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>ZebraPrinter_WIFI_BT</name>
+	<js-module name="ZebraPrinter_WIFI_BT" src="www/ZebraPrinter_WIFI_BT.js">
+		<clobbers target="cordova.plugins.ZebraPrinter_WIFI_BT" />
+	</js-module>
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="ZebraPrinter_WIFI_BT">
+				<param name="android-package" value="cordova-plugin-zebra-printer-wifi-bt.ZebraPrinter_WIFI_BT" />
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
+		<source-file src="src/android/ZebraPrinter_WIFI_BT.java" target-dir="src/cordova-plugin-zebra-printer-wifi-bt/ZebraPrinter_WIFI_BT" />
+	</platform>
+</plugin>

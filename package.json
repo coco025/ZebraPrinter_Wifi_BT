@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-zebra-printer-wifi-bt",
+  "version": "0.0.1",
+  "description": "Zebra - WIFI + BT",
+  "cordova": {
+    "id": "cordova-plugin-zebra-printer-wifi-bt",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coco025/ZebraPrinter_Wifi_BT.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "coco025",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coco025/ZebraPrinter_Wifi_BT/issues"
+  },
+  "homepage": "https://github.com/coco025/ZebraPrinter_Wifi_BT#readme"
+}
