@@ -1,18 +1,41 @@
-<?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-zebra-printer-wifi-bt" version="1.0"
-	xmlns="http://apache.org/cordova/ns/plugins/1.0"
-	xmlns:android="http://schemas.android.com/apk/res/android">
-	<name>ZebraPrinter_WIFI_BT</name>
-	<js-module name="ZebraPrinter_WIFI_BT" src="www/ZebraPrinter_WIFI_BT.js">
-		<clobbers target="cordova.plugins.ZebraPrinter_WIFI_BT" />
-	</js-module>
-	<platform name="android">
-		<config-file parent="/*" target="res/xml/config.xml">
-			<feature name="ZebraPrinter_WIFI_BT">
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-zebra-printer-wifi-bt"
+        version="1.0">
+
+    <name>ZebraPrinter_WIFI_BT</name>
+    <description>A Cordova driver for Zebra wifi + bluetooth printers</description>
+    <license>Apache</license>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+    <js-module src="www/ZebraPrinter_WIFI_BT.js" name="ZebraPrinter_WIFI_BT">
+        <clobbers target="cordova.plugins.ZebraPrinter_WIFI_BT" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+
+        <framework src="com.fasterxml.jackson.core:jackson-annotations:2.2.3" />
+        <framework src="com.fasterxml.jackson.core:jackson-core:2.2.3" />
+        <framework src="com.fasterxml.jackson.core:jackson-databind:2.2.3" />
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.BLUETOOTH"/>
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        </config-file>
+		<source-file src="src/android/ZebraPrinter_WIFI_BT.java" target-dir="src/android" />
+        
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ZebraPrinter_WIFI_BT">
 				<param name="android-package" value="cordova-plugin-zebra-printer-wifi-bt.ZebraPrinter_WIFI_BT" />
 			</feature>
-		</config-file>
-		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
-		<source-file src="src/android/ZebraPrinter_WIFI_BT.java" target-dir="src/cordova-plugin-zebra-printer-wifi-bt/ZebraPrinter_WIFI_BT" />
-	</platform>
+        </config-file>
+
+        <source-file src="src/android/ZSDK_ANDROID_API.jar" target-dir="libs"/>
+
+    </platform>
 </plugin>
