@@ -32,9 +32,9 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.Set;
 
-public class ZebraBluetoothPrinter extends CordovaPlugin implements DiscoveryHandler {
+public class ZebraPrinter_WIFI_BT extends CordovaPlugin implements DiscoveryHandler {
 
-    private static final String LOG_TAG = "ZebraBluetoothPrinter";
+    private static final String LOG_TAG = "ZebraPrinter_WIFI_BT";
     private CallbackContext callbackContext;
     private boolean printerFound;
     private Connection thePrinterConn;
@@ -43,7 +43,7 @@ public class ZebraBluetoothPrinter extends CordovaPlugin implements DiscoveryHan
     private final int MAX_PRINT_RETRIES = 1;
     private Connection printerConnection;
 
-    public ZebraBluetoothPrinter() {}
+    public ZebraPrinter_WIFI_BT() {}
 
     // @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -370,7 +370,7 @@ public class ZebraBluetoothPrinter extends CordovaPlugin implements DiscoveryHan
                     BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
                     if (bluetoothAdapter.isEnabled()) {
                         Log.d(LOG_TAG, "Searching for printers...");
-                        BluetoothDiscoverer.findPrinters(cordova.getActivity().getApplicationContext(), ZebraBluetoothPrinter.this);
+                        BluetoothDiscoverer.findPrinters(cordova.getActivity().getApplicationContext(), ZebraPrinter_WIFI_BT.this);
                     } else {
                         Log.d(LOG_TAG, "Bluetooth is disabled...");
                         callbackContext.error("Bluetooth ni vklopljen.");
