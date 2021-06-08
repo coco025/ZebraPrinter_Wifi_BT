@@ -4,15 +4,15 @@ exports.listBondedBTDevices = function(successCallback, errorCallback) {
     cordova.exec(successCallback, errorCallback, 'ZebraPrinter_WIFI_BT', 'listBondedBTDevices', []);
 };
 
-exports.printImagesBT = function(successCallback, errorCallback) {
+exports.printImagesBT = function(base64, MACAddress, successCallback, errorCallback) {
     cordova.exec(successCallback, errorCallback, 'ZebraPrinter_WIFI_BT', 'printImagesBT', [base64, MACAddress]);
 };
 
-exports.printImagesWifi = function(successCallback, errorCallback) {
+exports.printImagesWifi = function(base64, NETAddress, successCallback, errorCallback) {
     cordova.exec(successCallback, errorCallback, 'ZebraPrinter_WIFI_BT', 'printImagesWifi', [base64, NETAddress]);
 };
 
-exports.connectWifi = function(successCallback, errorCallback) {
+exports.connectWifi = function(NETAddress, successCallback, errorCallback) {
     cordova.exec(successCallback, errorCallback, 'ZebraPrinter_WIFI_BT', 'connectWifi', [NETAddress]);
 };
 
