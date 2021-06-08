@@ -27,7 +27,7 @@
             <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
             <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
         </config-file>
-		<source-file src="src/android/ZebraPrinter_WIFI_BT.java" target-dir="src/android" />
+		<source-file src="src/android/src/ZebraPrinter_WIFI_BT.java" target-dir="src/android/src" />
         
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="ZebraPrinter_WIFI_BT">
@@ -35,7 +35,7 @@
 			</feature>
         </config-file>
 
-        <source-file src="src/android/ZSDK_ANDROID_API.jar" target-dir="libs"/>
+        <source-file src="src/android/lib/ZSDK_ANDROID_API.jar" target-dir="libs"/>
 
     </platform>
 </plugin>
