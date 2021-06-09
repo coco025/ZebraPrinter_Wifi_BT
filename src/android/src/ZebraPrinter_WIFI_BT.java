@@ -1,4 +1,4 @@
-package it.zenitlab.cordova.plugins.zbtprinter;
+package it.cordova.plugins;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;

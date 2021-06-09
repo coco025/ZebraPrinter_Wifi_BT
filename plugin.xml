@@ -31,7 +31,7 @@
         
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="ZebraPrinter_WIFI_BT">
-				<param name="android-package" value="cordova-plugin-zebra-printer-wifi-bt.ZebraPrinter_WIFI_BT" />
+				<param name="android-package" value="it.cordova.plugins.ZebraPrinter_WIFI_BT" />
 			</feature>
         </config-file>
 
